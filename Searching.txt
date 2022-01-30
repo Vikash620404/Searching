@@ -1,0 +1,75 @@
+                                                                                                                             Searching
+1)Linear Search or Sequential Search
+Best Case Time Complexity =O(1)//When element is at first index
+Average Case Time Complexity=O(N)
+Worst Case Time Complexity=O(N)
+Space Complexity=O(1)
+
+
+
+Programe
+class Linearsearch{
+public static int search(int[]arr,int data){
+for(int start=0;start<arr.length;start++){
+if(arr[i]==data) return arr[i];
+
+
+}
+return -1;
+}
+
+public static void main (string[]args){
+int[]arr={1,2,3,6,5,4,7,8,9};
+System.out.println(search(arr,4));
+
+}
+}
+
+
+
+
+
+
+2)Binary Search 
+
+
+
+
+*** Rule->If Array is sorted then we apply Binary Search
+**Point->In binary Search Iterative way is faster than Recursive way because in recursive stack is used.
+Best Case Time Complexity =O(1)//When element is at first index
+Average Case Time Complexity=O(logN)
+Worst Case Time Complexity=O(logN)
+Space Complexity=O(1)
+
+class Binarysearch{
+public static int search(int[]arr,int data){
+int lowerIndex=0;
+int higherIndex=arr.length-1;
+while(lowerIndex<=higherIndex){
+int mid=lowerindex+(higherindex-lowerindex)/2;
+
+if(arr[mid]==data)return arr[mid];
+else if(arr[mid]<data)
+lowerIndex=mid+1;
+else
+higherIndex=mid-1;
+
+}
+
+
+
+}
+return -1;
+}
+
+
+public static void main (string[]args){
+int[]arr={1,2,3,6,5,4,7,8,9};
+System.out.println(search(arr,4));
+
+}
+}
+
+
+
